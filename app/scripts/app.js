@@ -1,5 +1,6 @@
 'use strict';
 
+
 /**
  * @ngdoc overview
  * @name spotsearchApp
@@ -19,13 +20,16 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        // templateUrl: 'views/main.html',
-        // controller: 'MainCtrl'
+      .when( '/search/artist/:query', {
+        templateUrl: 'views/artistsearch.html',
+        controller: 'ArtistSearchController'
+      })
+      .when( '/search/album/:query', {
+        templateUrl: 'views/albumsearch.html',
+        controller: 'AlbumSearchController'
       })
       .when('/about', {
-        // templateUrl: 'views/about.html',
-        // controller: 'AboutCtrl'
+
       })
       .otherwise({
         redirectTo: '/'

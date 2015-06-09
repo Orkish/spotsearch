@@ -1,0 +1,6 @@
+<div class="artist-results">
+  <ul>
+    <li ng-repeat="item in results.artists.items">{{item.name}}</li>
+    <li ng-repeat="item in results.artists.items"><img src="{{ item.images[1].url }}"></li>
+  </ul>
+</div>
